@@ -36,7 +36,7 @@ export default Ember.Service.extend({
     let mock = this.get('mock');
 
     let loadJs = lazyLoad && !mock ?
-      loadScript("https://js.stripe.com/v2/") :
+      loadScript("https://js.stripe.com/v3/") :
       Ember.RSVP.resolve();
 
     return loadJs.then(() => {
